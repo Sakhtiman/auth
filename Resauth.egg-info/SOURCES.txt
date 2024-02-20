@@ -1,0 +1,7 @@
+setup.py
+Resauth.egg-info/PKG-INFO
+Resauth.egg-info/SOURCES.txt
+Resauth.egg-info/dependency_links.txt
+Resauth.egg-info/entry_points.txt
+Resauth.egg-info/requires.txt
+Resauth.egg-info/top_level.txt

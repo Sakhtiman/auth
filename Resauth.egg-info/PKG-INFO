@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: Resauth
+Version: 0.1
+Requires-Dist: fastapi==0.68.0
+Requires-Dist: sqlalchemy==1.4.30
+Requires-Dist: pyjwt==2.3.0
+Requires-Dist: uvicorn==0.15.0
+Requires-Dist: passlib==1.7.4
+Requires-Dist: python-jose==3.3.0

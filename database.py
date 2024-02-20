@@ -8,7 +8,7 @@ import os
 current_dir = os.path.abspath(os.path.dirname(__file__))
 
 # Define the relative path to the database file
-relative_db_path = "mydatabase/user.db"
+relative_db_path = "mydatabase/test.db"
 
 # Create the SQLite URL using the relative path
 SQLALCHEMY_DATABASE_URL = f"sqlite:///{os.path.join(current_dir, relative_db_path)}"

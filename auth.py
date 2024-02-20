@@ -33,21 +33,21 @@ def decode_token(token: str):
         return None
     return token_data
 
-def authenticate_user(db: Session, username: str, password: str, password_hash: str, scope: str):
+def authenticate_user(db: Session, username: str, password: str, pas: str, scopes: str):
     user = db.query(User).filter(User.username == username).first()
     if not user:
         return False  # User does not exist
     if user.is_active:
         # Check if the provided password matches the hashed password
-        if pwd_context.verify(password, password_hash):
+        if pwd_context.verify(password, pas):
             # Check if the provided scope matches the user's scope
-            if user.scopes == scope:
+            if user.scopes == scopes:
                 return True
             else:
                 return False  # Scope mismatch
-        elif password == user.password_hash:
+        elif password == pas:
             # Check if the provided scope matches the user's scope
-            if user.scope == scope:
+            if user.scopes == scopes:
                 return True
             else:
                 return False  # Scope mismatch
